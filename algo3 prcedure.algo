@@ -1,0 +1,20 @@
+PROCEDURE Multi (Array1, Array2:Array, VAR S) 
+VAR
+    i : INTEGER.
+BEGIN
+    for i from 0 to Array1.length step1 do {
+        S= S+ Array1[i]*Array2[i];
+    }
+    end for;
+END
+ALGORITHM Calculation
+VAR
+    Tab1, Tab2 : ARRAY_OF INTEGER[50];
+    P : INTEGER.
+BEGIN
+    Multi (Tab1, Tab2, P);
+    if (P==0) THEN
+        Write (Tab1 and Tab2 are orthogonal )
+    else Write (Tab1 and Tab2 are not orthogonal )
+    END_IF
+END
